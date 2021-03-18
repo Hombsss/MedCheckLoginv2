@@ -1,0 +1,60 @@
+MDFloatLayout:
+    MDLabel:
+        id: label
+        text: "Welcome to MedCheck"
+        pos_hint: {"center_y": -1}
+        halign: "center"
+        font_style: "H4"
+        bold: True
+
+    MDLabel:
+        id: label1
+        text: email.text
+        pos_hint: {"center_y": -2}
+        halign: "center"
+        font_style: "H5"
+        bold: True
+
+    Image:
+        id: image
+        source: app.l
+        pos_hint: {"center_x": .5, "center_y": .8}
+        size_hint: .4, .4
+
+    MDTextField:
+        id: email
+        hint_text: "Email"
+        pos_hint: {"center_x": .5, "center_y": .6}
+        size_hint_x: .8
+        color_mode: "custom"
+        line_color_focus: 1, 0, 0, 1
+        on_focus: app.email()
+    MDTextField:
+        id: password
+        hint_text: "Password"
+        pos_hint: {"center_x": .5, "center_y": .48}
+        size_hint_x: .8
+        color_mode: "custom"
+        line_color_focus: 1, 0, 0, 1
+        password: True
+        on_focus: app.password()
+    MDRaisedButton:
+        id: login
+        text: "Login"
+        pos_hint: {"center_x": .5, "center_y": .3}
+        size_hint_x: .8
+        md_bg_color: 1, 0, 0, 1
+        on_release: app.login(email, password, login, create, image, label, label1)
+    MDRaisedButton:
+        id: create
+        text: "Don't Have an Account? Create now"
+        pos_hint: {"center_x": .5, "center_y": .2}
+        size_hint_x: .8
+        md_bg_color: 1, 0, 0, 1
+
+
+
+
+
+
+
